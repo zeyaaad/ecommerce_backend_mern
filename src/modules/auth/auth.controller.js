@@ -181,7 +181,6 @@ export const verify=async(req,res)=>{
     let exist=await userModel.findOne({verifyToken:token})
     if(!exist) return res.json({message:"Invaild token"})
     exist.verified=true 
-    exist.verifyToken=null;
     await exist.save()
     res.json({message:"success"})
 }
