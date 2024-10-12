@@ -33,7 +33,7 @@ export const onlinePayment = catchAsyncError(async (req, res, next) => {
     let session = await stripe.checkout.sessions.create({
         line_items: lineItems,
         mode: "payment",
-        success_url: `${process.env.BASE_URL}/api/v1/ecommerce/order/success/${req.params.id}`,
+        success_url: `https://ecommercoo.vercel.app/api/v1/ecommerce/order/success/${req.params.id}`,
         cancel_url:`${process.env.FRONT_URL}/cart`, 
         customer_email: req.user.email, 
         client_reference_id: req.user._id, 
