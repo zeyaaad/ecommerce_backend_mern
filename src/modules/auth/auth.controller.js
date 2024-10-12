@@ -297,7 +297,7 @@ export const ChangeEmail=catchAsyncError(async(req,res,next)=>{
     let user=await userModel.findById(req.user._id);
     let token= jwt.sign({id:req.user._id,email},process.env.SECRET_KEY_EMAIL);
     let data={email:email ,
-        api:`${process.env.FRONT_URL}/verifyChangeEmail/${token}`
+        api:`https://ecommerco.vercel.app/verifyChangeEmail/${token}`
     }
     user.verifyChangeEmailToken=token;
     await SendEmail(data)
