@@ -17,7 +17,8 @@ const allowedDomains = [
     "https://ecommerco.vercel.app",
     'https://stripe.com',
 "https://checkout.stripe.com",
-  'https://*.stripe.com' 
+  'https://*.stripe.com' ,
+    "http://localhost:3000"
     
 ];
 
