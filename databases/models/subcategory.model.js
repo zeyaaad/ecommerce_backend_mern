@@ -20,7 +20,7 @@ const subCategorySchema = mongoose.Schema({
     }
 }, { timestamps: true })
 subCategorySchema.post("init",(doc)=>{
-  doc.image=`${process.env.BASE_URl}/subCategory/${doc.image}`
+  doc.image=`https://ecommercoo.vercel.app/subCategory/${doc.image}`
 })
 export const subCategoryModel = mongoose.model('subCategory', subCategorySchema)
 
