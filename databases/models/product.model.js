@@ -73,10 +73,10 @@ const productSchema = mongoose.Schema(
 );
  
 productSchema.post("init",(doc)=>{
-  doc.imgCover=`${process.env.BASE_URl}/product/${doc.imgCover}`
+  doc.imgCover=`https://ecommercoo.vercel.app/product/${doc.imgCover}`
   
   if(doc.images) {
-    doc.images=doc.images.map(ele=>`${process.env.BASE_URl}/product/${ele}`);
+    doc.images=doc.images.map(ele=>`https://ecommercoo.vercel.app/product/${ele}`);
   }
 })
 
