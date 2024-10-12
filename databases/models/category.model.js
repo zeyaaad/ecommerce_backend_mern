@@ -17,7 +17,7 @@ const categorySchema = mongoose.Schema({
     image: String
 }, { timestamps: true })
 categorySchema.post("init",(doc)=>{
-  doc.image=`${process.env.BASE_URl}/category/${doc.image}`
+  doc.image=`https://ecommercoo.vercel.app/category/${doc.image}`
 })
 
 export const categoryModel=mongoose.model('category',categorySchema)
