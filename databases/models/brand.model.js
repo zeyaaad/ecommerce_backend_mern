@@ -20,7 +20,7 @@ const brandSchema = mongoose.Schema(
 ); 
 
 brandSchema.post("init",(doc)=>{
-  doc.logo=`${process.env.BASE_URl}/brand/${doc.logo}`
+  doc.logo=`https://ecommercoo.vercel.app/brand/${doc.logo}`
 })
 
 
